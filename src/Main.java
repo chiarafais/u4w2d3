@@ -12,6 +12,10 @@ public class Main {
     List<Product> prodotti = generaProdotti();
         System.out.println(prodotti);
 
+        List<Product> filterBook = prodotti.stream().filter(product -> product.getCategory().equals(Category.BOOKS) && product.getPrice() > 100.00).toList();
+        System.out.println("lista di Books con un costo maggiore a €100" + filterBook);
+
+
     }
     public static List<Product> generaProdotti(){
         List<Product> prodotti = new ArrayList<Product>();
@@ -27,7 +31,6 @@ public class Main {
         return prodotti;
     }
 
-
     public static Category randomCategory(){
         Random random = new Random();
         int num = random.nextInt(1,4);
@@ -39,4 +42,7 @@ public class Main {
         }
         return defaultCategory;
     }
+
+
+
 }

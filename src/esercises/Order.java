@@ -19,4 +19,52 @@ public class Order {
         this.products = products;
         this.customer = customer;
     }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setOrderDate(LocalDate orderDate) {
+        this.orderDate = orderDate;
+    }
+
+    public void setDeliveryDate(LocalDate deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public LocalDate getOrderDate() {
+        return orderDate;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public LocalDate getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
 }
